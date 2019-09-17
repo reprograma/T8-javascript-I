@@ -5,6 +5,34 @@
 4) Ter uma função para dividir o valor da conta entre as pessoas da mesa
 5) Mostrar na tela o nome, número da mesa, total de pessoas, total da conta e valor que cada um deve pagar
 */
+let nomeCliente = 'Jô'
+let numMesa = 6
+let totalConta = 0
+console.log(nomeCliente,numMesa,totalConta)
+
+function fazerPedido(valor){
+    totalConta = totalConta + valor // totalConta += valor 
+}
+
+function abaterPedido(valor){
+    totalConta = totalConta - valor 
+	console.log('Valor abatido: ', valor)
+	console.log('Total:',totalConta)
+}
+
+function fecharConta(numeroPessoas){
+    let valorIndividual = totalConta/numeroPessoas
+    return `
+    Fechamento da conta 
+    ----------------------------------------
+    Cliente: ${nomeCliente} Mesa: ${numMesa}
+    ----------------------------------------
+    Total: R$ ${totalConta}
+    Total pessoas: ${numeroPessoas}
+    Valor Individual: R$ ${valorIndividual}  `
+}
+
+
 
 
 //Escreva a função que retorne o resultado apresentado
